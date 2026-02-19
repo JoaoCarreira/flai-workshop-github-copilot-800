@@ -9,9 +9,8 @@ function Users() {
   const [formData, setFormData] = useState({ name: '', email: '', team: '' });
   const [saving, setSaving] = useState(false);
 
-  const API_BASE_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api`;
-  const API_URL = `${API_BASE_URL}/users/`;
-  const TEAMS_URL = `${API_BASE_URL}/teams/`;
+  const API_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`;
+  const TEAMS_URL = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`;
 
   useEffect(() => {
     console.log('Fetching users from:', API_URL);
