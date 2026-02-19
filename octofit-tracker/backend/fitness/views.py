@@ -32,6 +32,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    lookup_field = '_id'
 
 
 class TeamViewSet(viewsets.ModelViewSet):
@@ -40,6 +41,7 @@ class TeamViewSet(viewsets.ModelViewSet):
     """
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
+    lookup_field = '_id'
 
 
 class ActivityViewSet(viewsets.ModelViewSet):
@@ -48,6 +50,7 @@ class ActivityViewSet(viewsets.ModelViewSet):
     """
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
+    lookup_field = '_id'
 
 
 class LeaderboardViewSet(viewsets.ModelViewSet):
@@ -56,6 +59,7 @@ class LeaderboardViewSet(viewsets.ModelViewSet):
     """
     queryset = Leaderboard.objects.all()
     serializer_class = LeaderboardSerializer
+    lookup_field = '_id'
 
 
 class WorkoutViewSet(viewsets.ModelViewSet):
@@ -64,3 +68,4 @@ class WorkoutViewSet(viewsets.ModelViewSet):
     """
     queryset = Workout.objects.all()
     serializer_class = WorkoutSerializer
+    lookup_field = '_id'

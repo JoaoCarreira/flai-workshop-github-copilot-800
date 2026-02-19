@@ -2,7 +2,7 @@ from djongo import models
 
 
 class User(models.Model):
-    _id = models.ObjectIdField()
+    _id = models.ObjectIdField(primary_key=True)
     name = models.CharField(max_length=200)
     email = models.EmailField(unique=True)
     team = models.CharField(max_length=100)
@@ -17,7 +17,7 @@ class User(models.Model):
 
 
 class Team(models.Model):
-    _id = models.ObjectIdField()
+    _id = models.ObjectIdField(primary_key=True)
     name = models.CharField(max_length=100, unique=True)
     description = models.TextField()
     total_points = models.IntegerField(default=0)
@@ -32,7 +32,7 @@ class Team(models.Model):
 
 
 class Activity(models.Model):
-    _id = models.ObjectIdField()
+    _id = models.ObjectIdField(primary_key=True)
     user_email = models.EmailField()
     activity_type = models.CharField(max_length=100)
     duration = models.IntegerField()  # in minutes
@@ -49,7 +49,7 @@ class Activity(models.Model):
 
 
 class Leaderboard(models.Model):
-    _id = models.ObjectIdField()
+    _id = models.ObjectIdField(primary_key=True)
     type = models.CharField(max_length=50)  # 'user' or 'team'
     name = models.CharField(max_length=200)
     email = models.EmailField(blank=True, null=True)
@@ -66,7 +66,7 @@ class Leaderboard(models.Model):
 
 
 class Workout(models.Model):
-    _id = models.ObjectIdField()
+    _id = models.ObjectIdField(primary_key=True)
     name = models.CharField(max_length=200)
     description = models.TextField()
     category = models.CharField(max_length=100)
