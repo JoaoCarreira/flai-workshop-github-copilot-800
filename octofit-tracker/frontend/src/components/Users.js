@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+// OctoFit Users Component
 function Users() {
   const [users, setUsers] = useState([]);
   const [teams, setTeams] = useState([]);
